@@ -29,9 +29,12 @@ class JwtProcessorTest {
 
     @Test
     void getUsername() {
-        String token = "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ1c2VyMCIsImlhdCI6MTcyMTgwMjc4NCwiZXhwIjoxNzIxODAzMDg0fQ.nwD4rIr oYL6hr_ - Esav8KIsHw573MbAiTT - Nz_yYHI8bMcyGZMOEjMt0Own3io_c ";
-        String username = jwtProcessor.getUsername(token);
-        log.info(username);
-        assertNotNull(username);
+        String username = "user0";
+        String token = jwtProcessor.generateToken(username);
+
+
+        String username2 = jwtProcessor.getUsername(token);
+        log.info(username2);
+        assertNotNull(username2);
     }
 }
