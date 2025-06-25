@@ -20,6 +20,7 @@ import org.springframework.stereotype.Component;
 @Component
 @RequiredArgsConstructor
 public class CustomUserDetailsService implements UserDetailsService {
+
     private final UserDetailsMapper mapper;
 
     //Security로 로그인할때 Form에 입력한 ID 값을 이용해 사용자 정보를 가져오는 것
