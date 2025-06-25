@@ -1,5 +1,20 @@
-### GET request to example server
-GET https://examples.http-client.intellij.net/get
-    ?generated-in=IntelliJ IDEA
+### 성공로그인요청
+#POST http://localhost:8080/api/auth/login
+#Content-Type: application/json
+#
+#{
+#  "username": "user0",
+#  "password": "1234"
+#}
 
-###
+#GET http://localhost:8080/api/security/all
+
+#GET http://localhost:8080/api/security/member
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "user0",
+  "password": "1234"
+}
